@@ -44,7 +44,7 @@ package.json
 src / server.js
 ```js
 const express = require('express')
-// const path = require('path')
+const path = require('path')
 
 // const db = require('./database')
 const routes = require('./routes/routes')
@@ -52,10 +52,10 @@ const routes = require('./routes/routes')
 const app = express()
 
 // conexão com DB
-// db.connect()
+db.connect()
 
-// habilitar server para recebr  dados via post (formulário)
-app.use(express.urlencoded({ extended:true }))
+// habilitar server para receber dados json no corpo da requisição - postman
+app.use(express.json())
 
 // definindo as rotas
 app.use('/api', routes)
