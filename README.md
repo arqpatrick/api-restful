@@ -88,3 +88,12 @@ git remote add origin https://github.com/usuario_github/repositorio-criado.git
 git push --set-upstream origin master
 npm run dev
 ```
+---
+
+6
+```bash
+mkdir -p src/database
+touch src/database/db.js
+
+
+```
